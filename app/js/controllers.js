@@ -7,6 +7,5 @@ myApp.controller('KursyController', ['$scope', '$http', function ($scope, $http)
  		cache: 'false',
  	}).success(function (data) {
 			$scope.kursy = data;
-			console.log(data);
 		});
 }]);
