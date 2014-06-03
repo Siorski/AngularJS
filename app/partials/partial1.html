@@ -3,15 +3,15 @@
 <table id="tabela" class="table table-bordered" ng-controller="KursyController">
 	<thead>
 		<tr>
-			<th> Waluty </th>
-			<th> I </th>
-			<th> Kupno </th>
-			<th> Sprzedaż </th>
-			<th> Zmiana </th>
+			<th><a href="" ng-click="kolumna='N';reverse=!reverse"> Waluty </a> </th>
+			<th><a href="" ng-click="kolumna='I';reverse=!reverse"> I </a> </th>
+			<th><a href="" ng-click="kolumna='B';reverse=!reverse"> Kupno </a> </th>
+			<th><a href="" ng-click="kolumna='S';reverse=!reverse"> Sprzedaż </a> </th>
+			<th><a href="" ng-click="kolumna='P';reverse=!reverse"> Zmiana </a> </th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="kurs in kursy">
+		<tr ng-repeat="kurs in kursy | orderBy:kolumna:reverse ">
 			<td> {{kurs.N}}	</td>
 			<td> {{kurs.I}} </td>
 			<td> {{kurs.B}} </td>
