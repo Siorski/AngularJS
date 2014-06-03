@@ -3,18 +3,20 @@
 <table id="tabela" class="table table-bordered" ng-controller="KursyController">
 	<thead>
 		<tr>
+			<th> Waluty </th>
 			<th> I </th>
-			<th> B </th>
-			<th> S </th>
-			<th> P </th>
+			<th> Kupno </th>
+			<th> Sprzedaż </th>
+			<th> Zmiana </th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr ng-repeat="kurs in kursy">
+			<td> {{kurs.N}}	</td>
 			<td> {{kurs.I}} </td>
 			<td> {{kurs.B}} </td>
 			<td> {{kurs.S}} </td>
-			<td> {{kurs.P}} </td>
+			<td> {{kurs.P}} % </td>
 		</tr>
 	</tbody>
 </table>
