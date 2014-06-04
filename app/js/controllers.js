@@ -8,4 +8,10 @@ myApp.controller('KursyController', ['$scope', '$http', function ($scope, $http)
  	}).success(function (data) {
 			$scope.kursy = data;
 		});
+ 	loadJson = function(){
+		$http.get('public/kursy.json').success(function(data) {
+			$scope.kursy = data;
+		});
+	}
+	setInterval(loadJson, 10000)
 }]);

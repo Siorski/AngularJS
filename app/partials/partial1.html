@@ -1,5 +1,10 @@
 <legend>Kursy walut</legend>
 
+<div id="wyszukiwarka">
+	<label for="szukajka">Wyszukaj: </label>
+	<input id="szukajka" ng-model="szukanaFraza">
+</div>
+
 <table id="tabela" class="table table-bordered" ng-controller="KursyController">
 	<thead>
 		<tr>
@@ -11,7 +16,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr ng-repeat="kurs in kursy | orderBy:kolumna:reverse ">
+		<tr ng-repeat="kurs in kursy | orderBy:kolumna:reverse | filter:szukanaFraza">
 			<td> {{kurs.N}}	</td>
 			<td> {{kurs.I}} </td>
 			<td> {{kurs.B}} </td>
