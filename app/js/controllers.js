@@ -3,13 +3,14 @@ var myApp = angular.module('myApp.controllers', []);
 myApp.controller('KursyController', ['$scope', '$http', function ($scope, $http) {
 	$http({
  		method: 'GET',
- 		url: 'public/kursy.json',
+ 		url: 'public/kursy.json?nocache=' + (new Date()).getTime(),
  		cache: 'false',
  	}).success(function (data) {
 			$scope.kursy = data;
 		});
- 	loadJson = function(){
-		$http.get('public/kursy.json').success(function(data) {
+
+ 	var loadJson = function(){
+		$http.get('public/kursy.json?nocache='+ (new Date()).getTime()).success(function(data) {
 			$scope.kursy = data;
 		});
 	}
