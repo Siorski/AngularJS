@@ -1,0 +1,40 @@
+#tabela{
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: steelblue;
+}
+
+#tabela > tbody > tr{
+  text-align: center;
+}
+
+#tabela > thead > tr > th{
+  text-align: center;
+}
+
+#tabela > thead > tr > th > a{
+  color: black;
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 15px;
+}
+
+#wyszukiwarka{
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  padding: 5px;
+  margin-right: auto;
+  margin-bottom: 15px;
+  font-size: 20px; 
+}
+
+legend.ng-scope{
+  margin-right: auto;
+  margin-left: auto;
+  width: 50%;
+  text-align: center;
+  margin-top: 50px;
+  font-size: 40px;
+}
